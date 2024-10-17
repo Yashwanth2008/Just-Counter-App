@@ -20,7 +20,10 @@ function App() {
 
   const handleReset = () => {
     setNum((value) => {
-      return value = 0;
+      if (value > 0) {
+        return value = 0;
+      }
+      return value;
     })
   }
   return (
