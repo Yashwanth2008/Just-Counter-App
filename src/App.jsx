@@ -3,6 +3,17 @@ import "./App.css";
 
 function App() {
   const [num, setNum] = useState(0);
+  const [theme, setTheme] = useState("dark");
+
+  const toggleTheme = () => {
+    setTheme((prevTheme) => {
+      if (prevTheme === "dark") {
+        return "light";
+      } else {
+        return "dark";
+      }
+    });
+  };
 
   const handleIncrement = () => {
     setNum((value) => {
@@ -21,18 +32,19 @@ function App() {
   const handleReset = () => {
     setNum((value) => {
       if (value > 0) {
-        return value = 0;
+        return (value = 0);
       }
       return value;
-    })
-  }
+    });
+  };
   return (
-    <div className="overall-wrapper">
+    <div className={`overall-wrapper ${theme}`}>
       <div className="icons">
-        <i className="fa-solid fa-circle-half-stroke"></i>
-        <i className="fa-solid fa-circle-info"></i>
-        <i className="fa-solid fa-gear"></i>
-        <i className="fa-solid fa-rotate-right" onClick={handleReset}></i>
+        {/* Toggle the theme on clicking this icon */}
+        <i id="navicons" className="fa-solid fa-circle-half-stroke" onClick={toggleTheme}></i>
+        <i id="navicons" className="fa-solid fa-circle-info"></i>
+        <i id="navicons"className="fa-solid fa-gear"></i>
+        <i id="navicons" className="fa-solid fa-rotate-right" onClick={handleReset}></i>
       </div>
       <div className="content">
         <button id="addBtn" onClick={handleDecrement}>

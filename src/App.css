@@ -1,3 +1,13 @@
+.dark {
+  --background-color: #151617;
+  --text-color: #cfd5e3;
+  --button-border: #5e6269;
+}
+.light {
+  --background-color: #f2f2f2;
+  --text-color: #333333;
+  --button-border: #c2c2c2;
+}
 * {
   padding: 0;
   margin: 0;
@@ -6,9 +16,6 @@
   font-weight: 400;
   font-style: normal;
 }
-body {
-  background-color: #151617;
-}
 .overall-wrapper {
   display: flex;
   justify-content: center;
@@ -16,6 +23,7 @@ body {
   height: 100vh;
   width: 100vw;
   flex-direction: column;
+  background-color: var(--background-color);
 }
 .content {
   display: flex;
@@ -25,7 +33,7 @@ body {
   width: 100%;
   padding: 35px;
   box-sizing: border-box;
-  color: #cfd5e3;
+  color: var(--text-color);
 }
 .data {
   position: relative;
@@ -35,25 +43,24 @@ button {
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  border: 1px solid #5e6269;
+  border: 1px solid var(--button-border);
   font-size: 42px;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   background: none;
-  color: #cfd5e3;
+  color: var(--text-color);
   padding: 0;
   line-height: 1;
 }
 .data {
-  color: #cfd5e3;
+  color: var(--text-color);
 }
-
 .icons i {
   display: flex;
   font-size: 20px;
-  color: #cfd5e3;
+  color: var(--text-color);
   cursor: pointer;
 }
 .icons {
@@ -63,9 +70,10 @@ button {
   position: absolute;
   top: 50px;
 }
-i{
+#navicons{
   transition: transform 0.3s ease; 
 }
-i:hover{
+#navicons:hover{
   transform: scale(1.4);
 }
+
