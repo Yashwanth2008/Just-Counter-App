@@ -4,6 +4,7 @@ import "./App.css";
 function App() {
   const [num, setNum] = useState(0);
   const [theme, setTheme] = useState("dark");
+  const [isModalOpen, setIsModalOpen] = useState("modelClose");
 
   const toggleTheme = () => {
     setTheme((prevTheme) => {
@@ -15,36 +16,81 @@ function App() {
     });
   };
 
+  const toggleModal = () => {
+    setIsModalOpen((prevModel) => {
+      if (prevModel === "modelClose") {
+        return "modelOpen";
+      } else {
+        return "modelClose";
+      }
+    });
+  };
+
   const handleIncrement = () => {
-    setNum((value) => {
-      return (value = value + 1);
+    setNum((num) => {
+      return (num = num + 1);
     });
   };
   const handleDecrement = () => {
-    setNum((value) => {
-      if (value > 0) {
-        return (value = value - 1);
+    setNum((num) => {
+      if (num > 0) {
+        return (num = num - 1);
       }
-      return value;
+      return num;
     });
   };
 
   const handleReset = () => {
-    setNum((value) => {
-      if (value > 0) {
-        return (value = 0);
+    setNum((num) => {
+      if (num > 0) {
+        return (num = 0);
       }
-      return value;
+      return num;
     });
   };
   return (
     <div className={`overall-wrapper ${theme}`}>
+      {/* Modal Section*/}
+      <div id="myModal" className={`modal ${isModalOpen}`}>
+        <div className="modal-content">
+          <h2>Just Counter</h2>
+          <p>A simple tool for counting things and keeping track of numbers.</p>
+          <p className="learn-more">
+            <a href="https://github.com/Yashwanth2008">Learn more</a>
+          </p>
+          <p className="copyright">
+            ©
+            <a
+              href="https://github.com/Yashwanth2008"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Yashwanth V
+            </a>
+          </p>
+          <div className="close-modal">
+            <i className="fa-regular fa-circle-xmark" onClick={toggleModal}></i>
+          </div>
+        </div>
+      </div>
+      {/* Icons Section */}
       <div className="icons">
-        {/* Toggle the theme on clicking this icon */}
-        <i id="navicons" className="fa-solid fa-circle-half-stroke" onClick={toggleTheme}></i>
-        <i id="navicons" className="fa-solid fa-circle-info"></i>
-        <i id="navicons"className="fa-solid fa-gear"></i>
-        <i id="navicons" className="fa-solid fa-rotate-right" onClick={handleReset}></i>
+        <i
+          id="navicons"
+          className="fa-solid fa-circle-half-stroke"
+          onClick={toggleTheme}
+        ></i>
+        <i
+          id="navicons"
+          className="fa-solid fa-circle-info"
+          onClick={toggleModal}
+        ></i>
+        <i id="navicons" className="fa-solid fa-gear"></i>
+        <i
+          id="navicons"
+          className="fa-solid fa-rotate-right"
+          onClick={handleReset}
+        ></i>
       </div>
       <div className="content">
         <button id="addBtn" onClick={handleDecrement}>
@@ -56,7 +102,7 @@ function App() {
         </button>
       </div>
       <div className="data">
-        <span>Hello World</span>
+        <span>Limit for Counter will be Implemented Soon</span>
       </div>
     </div>
   );

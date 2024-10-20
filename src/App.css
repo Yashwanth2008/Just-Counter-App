@@ -2,11 +2,19 @@
   --background-color: #151617;
   --text-color: #cfd5e3;
   --button-border: #5e6269;
+  --modal-background: rgb(0 0 0 / 91%);
 }
 .light {
   --background-color: #f2f2f2;
   --text-color: #333333;
   --button-border: #c2c2c2;
+  --modal-background: rgb(250 250 250 / 91%);
+}
+.modelOpen{
+  --display: block;
+}
+.modelClose{
+  --display: none;
 }
 * {
   padding: 0;
@@ -77,3 +85,69 @@ button {
   transform: scale(1.4);
 }
 
+/* modal */
+*{
+  font-family: "Inter", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+body{
+  background-color: var(--background-color)
+}
+/* Modal default hidden */
+.modal {
+  display: var(--display); 
+  position: fixed; 
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  background-color: var(--modal-background)
+}
+
+/* Modal content box */
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 35px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  border-radius: 5px;
+  width: 80%;
+  max-width: 300px;
+  text-align: center;
+  background-color: transparent;
+  color: var(--text-color)
+}
+
+/* Close button */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 24px;
+  cursor: pointer;
+}
+.learn-more a{
+  text-decoration: underline;
+  color: var(--text-color);
+}
+.author{
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.copyright a{
+  color: var(--text-color);
+  text-decoration: none;
+}
+.close-modal i{
+  font-size: 25px;
+}
