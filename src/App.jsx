@@ -85,7 +85,7 @@ function App() {
           className="fa-solid fa-circle-info"
           onClick={toggleModal}
         ></i>
-        <i id="navicons" className="fa-solid fa-gear"></i>
+        {/* <i id="navicons" className="fa-solid fa-gear"></i> */}
         <i
           id="navicons"
           className="fa-solid fa-rotate-right"
@@ -102,7 +102,7 @@ function App() {
         </button>
       </div>
       <div className="data">
-        <span>Limit for Counter will be Implemented Soon</span>
+        {/* <span>Limit for Counter will be Implemented Soon</span> */}
       </div>
     </div>
   );
