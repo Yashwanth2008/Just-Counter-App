@@ -56,7 +56,13 @@ function App() {
           <h2>Just Counter</h2>
           <p>A simple tool for counting things and keeping track of numbers.</p>
           <p className="learn-more">
-            <a href="https://github.com/Yashwanth2008">Learn more</a>
+            <a
+              href="https://github.com/Yashwanth2008/Just-Counter-App"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Learn more
+            </a>
           </p>
           <p className="copyright">
             ©
@@ -68,6 +74,15 @@ function App() {
               Yashwanth V
             </a>
           </p>
+          <div className="contact-icons">
+            <a
+              href="https://github.com/Yashwanth2008"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i id="github-icon" className="fa-brands fa-github"></i>
+            </a>
+          </div>
           <div className="close-modal">
             <i className="fa-regular fa-circle-xmark" onClick={toggleModal}></i>
           </div>

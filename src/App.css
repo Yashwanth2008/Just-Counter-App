@@ -151,3 +151,8 @@ body{
 .close-modal i{
   font-size: 25px;
 }
+.contact-icons i{
+  color: var(--text-color);
+  cursor: pointer;
+  font-size: 20px;
+}
