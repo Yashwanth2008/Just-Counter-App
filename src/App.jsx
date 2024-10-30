@@ -87,7 +87,14 @@ function App() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <i id="linkedIn-icon" class="fa-brands fa-linkedin"></i>
+              <i id="linkedIn-icon" className="fa-brands fa-linkedin"></i>
+            </a>
+            <a
+              href=""
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i id="x-icon" className="fa-brands fa-twitter"></i>
             </a>
           </div>
           <div className="close-modal">
