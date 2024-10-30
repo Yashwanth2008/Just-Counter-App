@@ -82,6 +82,13 @@ function App() {
             >
               <i id="github-icon" className="fa-brands fa-github"></i>
             </a>
+            <a
+              href=""
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i id="linkedIn-icon" class="fa-brands fa-linkedin"></i>
+            </a>
           </div>
           <div className="close-modal">
             <i className="fa-regular fa-circle-xmark" onClick={toggleModal}></i>
